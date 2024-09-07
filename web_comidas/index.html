@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON TIKI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- SECCION INICIO -->
+    <section id="inicio">
+        <header>
+            <div class="contenido-header">
+                <div class="logo">
+                    <h1>DON TIKI</h1>
+                </div>
+                <nav id="nav">
+                    <ul>
+                        <!-- ... tu código de navegación ... -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="gallery js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": false, "autoPlay": true}'>
+                <div class="gallery-cell">
+                    <img src="img/1.jpg" alt="Imagen 1">
+                </div>
+                <!-- ... otras imágenes del carrusel ... -->
+            </div>
+            <div class="info">
+                <h2>Comidas exquisitas para el paladar</h2>
+                <p>Los mejores platillos para tu paladar</p>
+                <button onclick="mostrarMas()">Leer Más</button>
+                
+                <!-- Contenido adicional que se ocultará por defecto -->
+                <div id="contenido-adicional" style="display: none;">
+                    <p>Bienvenidos a Don Tiki, tu destino para disfrutar de las comidas más exquisitas que deleitarán tu paladar. Ofrecemos una amplia variedad de platos preparados con ingredientes frescos y de la más alta calidad, perfectos para cada ocasión. Ya sea que estés buscando un platillo tradicional o una experiencia culinaria innovadora, en Don Tiki encontrarás el sabor perfecto para satisfacer tus deseos gastronómicos. ¡Descubre el placer de comer bien con nosotros!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SABORES -->
+    <section id="sabores">
+        <h2>Sabores</h2>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor1.png" alt="Ensaladas">
+                </div>
+                <div class="info">
+                    <h3>Ensaladas</h3>
+                    <p>Las mejores ensaladas las encuentras en un restaurante DON TIKI.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor2.png" alt="Tortas">
+                </div>
+                <div class="info">
+                    <h3>Tortas</h3>
+                    <p>Las mejores tortas las encontrarás en DON TIKI.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor3.png" alt="Hamburguesas">
+                </div>
+                <div class="info">
+                    <h3>Hamburguesas</h3>
+                    <p>Disfruta de la perfección en cada mordisco con nuestras jugosas hamburguesas artesanales. Hechas con carne de la más alta calidad y una mezcla de ingredientes frescos, cada hamburguesa es una explosión de sabor.</p>
+                </div>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor4.png" alt="Helados">
+                </div>
+                <div class="info">
+                    <h3>Helados</h3>
+                    <p>Deléitate con la cremosidad y el sabor incomparable de nuestros helados artesanales. Elaborados con ingredientes frescos y naturales, nuestros helados vienen en una variedad de sabores irresistibles, desde los clásicos como vainilla y chocolate hasta creaciones exclusivas y sorprendentes.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor5.png" alt="Pastas">
+                </div>
+                <div class="info">
+                    <h3>Pastas</h3>
+                    <p>Descubre la auténtica experiencia italiana con nuestras deliciosas pastas. Elaboradas con ingredientes frescos y de la más alta calidad, nuestras recetas tradicionales y creativas ofrecen sabores inigualables que deleitarán tu paladar.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="icono">
+                    <img src="img/sabor6.png" alt="Galletas">
+                </div>
+                <div class="info">
+                    <h3>Galletas</h3>
+                    <p>Sumérgete en la dulzura y la textura crujiente de nuestras galletas artesanales. Hechas con los mejores ingredientes y horneadas con amor.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Botón "Ver Más" -->
+        <button onclick="toggleContent('sabores-adicional')">Ver Más</button>
+    </section>
+    
+    <!-- SECCION SABORES ADICIONALES -->
+    <section id="sabores-adicional">
+        <div class="contenido-adicional" style="display: none;">
+            <p>Don Tiki ofrece una explosión de sabores exquisitos para el paladar. Desde nuestras ensaladas frescas y coloridas hasta hamburguesas artesanales y pastas con auténtico sabor italiano, cada platillo está diseñado para deleitar tus sentidos. Descubre nuestra variedad de sabores, elaborados con ingredientes frescos y de alta calidad, que transformarán cada bocado en una experiencia única. ¡Ven y prueba lo mejor de la cocina en Don Tiki!</p>
+        </div>
+    </section>
+
+    <!-- SECCION PLATOS -->
+    <section id="platos">
+        <h2>Platos</h2>
+        <div class="fila">
+            <div class="item">
+                <img src="img/plato1.jpg" alt="Chiles y Alitas">
+                <p>Chiles y Alitas de Pollo Frito en un Plato</p>
+            </div>
+            <div class="item">
+                <img src="img/plato2.jpg" alt="Ensalada de Pescado">
+                <p>Plato de Ensalada de Pescado</p>
+            </div>
+            <div class="item">
+                <img src="img/plato3.jpg" alt="Carne Asada">
+                <p>Plato de Carne Asada Servido en Plato Blanco</p>
+            </div>
+        </div>
+        <div class="fila">
+            <div class="item">
+                <img src="img/plato4.jpg" alt="Bife a la Plancha">
+                <p>Plato de Bife a la Plancha con Papas Fritas</p>
+            </div>
+            <div class="item">
+                <img src="img/plato5.jpg" alt="Pizza con Rúcula">
+                <p>Plato de Pizza con Rúcula</p>
+            </div>
+            <div class="item">
+                <img src="img/plato6.jpg" alt="Pastas con Tuco">
+                <p>Plato de Pastas con Tuco</p>
+            </div>
+        </div>
+        <button>Ver Más</button>
+    </section>
+
+    <!-- SECCION BLOG -->
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="galeria-blog js-flickity" data-flickity-options='{ "wrapAround":true, "pageDots": true}'>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/cheff1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>El arte de cocinar</h3>
+                        <p>El arte de cocinar se transforma en una experiencia única: sabores innovadores y creatividad en cada plato.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/cheff2.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>¿Donde estudiar cocina?</h3>
+                        <p>Transforma tu pasión por la cocina en maestría: descubre dónde estudiar y dominar el arte culinario en 2024.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-cell" >
+                <div class="item">
+                    <div class="foto">
+                        <img src="img/cheff3.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <h3>La cocina del 2024</h3>
+                        <p>En la cocina del 2024, cada plato cuenta una historia de creatividad y sabor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>Leer Más</button>
+    </section>
+
+    <!-- SECCION CONTACTO Y PIE DE PAGINA -->
+    <section id="contacto">
+        <div class="fila">
+            <div class="col">
+                <h1>DON TIKI</h1>
+            </div>
+            <div class="col">
+                <h3>Menú</h3>
+                <a href="#inicio">Inicio</a>
+                <a href="#sabores">Sabores</a>
+                <a href="#platos">Platos</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="col">
+                <h3>Chefs</h3>
+                <a href="#">Juan Hernandez</a>
+                <a href="#">Sebastián Palacios</a>
+                <a href="#">Valeria Anariba</a>
+            </div>
+            <div class="col">
+                <h3>Social Media</h3>
+                <div class="media">
+                    <i class="fa-brands fa-twitter"></i> <a href="#">Twitter</a>
+                </div>
+                <div class="media">
+                    <i class="fa-brands fa-instagram"></i> <a href="#">Instagram</a>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Contacto</h3>
+                <input type="text" placeholder="Tu correo">
+                <input type="submit" class="enviar" value="Enviar">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function mostrarMas() {
+            var contenido = document.getElementById("contenido-adicional");
+            if (contenido.style.display === "none") {
+                contenido.style.display = "block";
+            } else {
+                contenido.style.display = "none";
+            }
+        }
+
+        function toggleContent(sectionId) {
+            var contenidoAdicional = document.querySelector('#' + sectionId + ' .contenido-adicional');
+            if (contenidoAdicional.style.display === "none" || contenidoAdicional.style.display === "") {
+                contenidoAdicional.style.display = "block";
+            } else {
+                contenidoAdicional.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
